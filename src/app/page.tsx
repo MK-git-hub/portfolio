@@ -20,9 +20,9 @@ export default function Home() {
 
   const contactContent = (
     <div className="text-sm space-y-2">
-      <p>Email: <a className="text-blue-600 hover:underline" href="mailto:you@example.com">you@example.com</a></p>
-      <p>LinkedIn: <a className="text-blue-600 hover:underline" href="#">linkedin.com/in/yourprofile</a></p>
-      <p>Location: Boston, MA</p>
+      <p>Email: <a className="text-blue-600 hover:underline" href="mailto:you@example.com">manalikulkarnie@gmail.com</a></p>
+      <p>LinkedIn: <a className="text-blue-600 hover:underline" href="#">lhttps://www.linkedin.com/in/manali-sonawane-a3382a1b0/</a></p>
+      <p>Location: USA</p>
     </div>
   );
 
