@@ -19,6 +19,8 @@ type Project = {
   tech: string[];
   link: string;
   gradient: string;
+  imageSrc: string;
+  imageAlt?: string;
   caseStudy: {
     title: string;
     description: string;
@@ -32,31 +34,13 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Mercor AI Web Design & Development",
-    company: "Mercor (AI Research Lab)",
-    tech: ["React.js", "Python", "AWS", "REST APIs", "Lighthouse"],
-    link: "#",
-    gradient: "from-purple-500 via-pink-500 to-red-500",
-    caseStudy: {
-      title: "LLM Web Application Optimization",
-      description: "Enhanced AI-generated React apps for performance, accessibility, and maintainability.",
-      achievements: [
-        "🚀 Improved Lighthouse scores via code-splitting & lazy loading",
-        "♿ Ensured WCAG 2.1 compliance with UI/UX refinements",
-        "☁️ Integrated AWS (S3, CloudFront, Lambda) for global scalability"
-      ]
-    },
-    techUsage: {
-      labels: ["React.js", "JavaScript (ES6)", "Tailwind CSS", "AWS", "Python", "Accessibility"],
-      data: [100, 95, 85, 70, 60, 80]
-    }
-  },
-  {
     title: "Donor Portal & Fundraising Platform",
     company: "Community Brands (NCU)",
     tech: ["Angular 14+", "Next.js", "GraphQL", "RxJS", "AWS ECS/K8s"],
     link: "#",
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
+    imageSrc: "/community%20brands.png",
+    imageAlt: "Community Brands",
     caseStudy: {
       title: "Fundraising & Events Platform",
       description: "Led end-to-end development of donor, fundraising & event portals.",
@@ -77,6 +61,8 @@ const projects: Project[] = [
     tech: ["React.js", "Angular", "Next.js", "Redux", "D3.js"],
     link: "#",
     gradient: "from-green-500 via-emerald-500 to-teal-500",
+    imageSrc: "/fhf.jpg",
+    imageAlt: "First Help Financial",
     caseStudy: {
       title: "Sales & Analytics Dashboards",
       description: "Developed SalesBI and Inside Sales dashboards with React & D3.js.",
@@ -97,6 +83,8 @@ const projects: Project[] = [
     tech: ["Angular", "React.js", "Java/J2EE", "D3.js", "Microservices"],
     link: "#",
     gradient: "from-orange-500 via-yellow-500 to-amber-500",
+    imageSrc: "/accenture.png",
+    imageAlt: "Accenture themed image",
     caseStudy: {
       title: "Enterprise Solutions",
       description: "Delivered banking, healthcare & eLearning apps for Fortune 500 clients.",
@@ -117,6 +105,8 @@ const projects: Project[] = [
     tech: ["Java/J2EE", "JSP", "MVC", "Accessibility", "Oracle DB"],
     link: "#",
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    imageSrc: "/NY%20state.png",
+    imageAlt: "New York State",
     caseStudy: {
       title: "Compliance Portals",
       description: "Developed CHRC & OLTC applications for healthcare compliance.",
@@ -131,6 +121,28 @@ const projects: Project[] = [
       data: [80, 75, 85, 90, 70, 85]
     }
   },
+  {
+    title: "Cars for Grad - Web App",
+    company: "First Help Financial",
+    tech: ["React.js", "Next.js", "Tailwind CSS", "AWS", "REST APIs"],
+    link: "#",
+    gradient: "from-blue-500 via-teal-500 to-green-500",
+    imageSrc: "/fhf2.png",
+    imageAlt: "Cars for Grad",
+    caseStudy: {
+      title: "Cars for Grad Program",
+      description: "Designed and built a responsive platform to help recent graduates explore and qualify for auto loans with transparent pricing and guidance.",
+      achievements: [
+        "🚗 Created conversion-optimized flows and accessible UI for applicants",
+        "⚡ Improved performance with image optimization and route-level code splitting",
+        "☁️ Integrated AWS (S3/CloudFront/Lambda) for scalable content and APIs"
+      ]
+    },
+    techUsage: {
+      labels: ["React.js", "Next.js", "Tailwind CSS", "AWS", "REST APIs", "Accessibility"],
+      data: [90, 85, 80, 70, 75, 85]
+    }
+  }  
 ];
 
 // Chart component for tech usage
@@ -230,12 +242,12 @@ export default function Portfolio() {
               <div className="space-y-6">
                 <div className="flex flex-col gap-4">
                   {/* Image section */}
-                  <div className="relative h-48 w-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                  <div className="relative h-64 md:h-72 w-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                     <Image 
-                      src="/next.svg" 
-                      alt="Project placeholder" 
+                      src={p.imageSrc} 
+                      alt={p.imageAlt ?? "Project image"} 
                       fill 
-                      className="object-contain p-6 opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" 
+                      className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" 
                     />
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
