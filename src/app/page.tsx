@@ -12,6 +12,17 @@ export default function Home() {
         Principal Frontend Engineer crafting accessible, performant web applications with React, Angular, and Next.js.
         Experienced across finance, healthcare, education, and non-profit domains.
       </p>
+      <div className="rounded-md border border-black/10 dark:border-white/15 p-4 space-y-3">
+        <h3 className="text-base font-semibold">Education</h3>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>
+            <span className="font-medium">MS (Computer Science)</span> — Marist College, NY, USA
+          </li>
+          <li>
+            <span className="font-medium">Bachelor of Engineering, Computer Engineering</span> — University of Pune, India
+          </li>
+        </ul>
+      </div>
       <div className="rounded-md border border-black/10 dark:border-white/15 p-4">
         <Charts />
       </div>
@@ -46,7 +57,7 @@ export default function Home() {
           initialId="portfolio"
           items={[
             { id: "portfolio", label: "Portfolio", content: portfolioContent },
-            { id: "about", label: "About", content: aboutContent },
+            { id: "about", label: "About me", content: aboutContent },
             { id: "contact", label: "Contact", content: contactContent },
             { id: "geo", label: "Client geographic location", content: geoContent },
           ]}
