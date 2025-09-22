@@ -15,11 +15,11 @@ ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Le
 
 export default function Charts() {
   const pieData = {
-    labels: ["React", "Angular", "Next.js", "D3.js"],
+    labels: ["React", "Angular","Other JS Libraries","Next.js", "UX/Design","Java/J2EE/Python/OtherBackend"],
     datasets: [
       {
-        data: [35, 25, 20, 20],
-        backgroundColor: ["#60a5fa", "#f59e0b", "#10b981", "#ef4444"],
+        data: [30, 20, 10,10, 20, 10],
+        backgroundColor: ["#a855f7", "#10b981", "#bf8989", "#f59e0b", "#90a5fa", "#ef4444"],
       },
     ],
   };
