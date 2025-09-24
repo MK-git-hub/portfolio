@@ -39,7 +39,7 @@ const projects: Project[] = [
     tech: ["Angular 14+", "Next.js", "GraphQL", "RxJS", "AWS ECS/K8s"],
     link: "#",
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
-    imageSrc: "/community%20brands.png",
+    imageSrc: "/portfolio/community%20brands.png",
     imageAlt: "Community Brands",
     caseStudy: {
       title: "Fundraising & Events Platform",
@@ -61,7 +61,7 @@ const projects: Project[] = [
     tech: ["React.js", "Angular", "Next.js", "Redux", "D3.js"],
     link: "#",
     gradient: "from-green-500 via-emerald-500 to-teal-500",
-    imageSrc: "/fhf.jpg",
+    imageSrc: "/portfolio/fhf.jpg",
     imageAlt: "First Help Financial",
     caseStudy: {
       title: "Sales & Analytics Dashboards",
@@ -83,7 +83,7 @@ const projects: Project[] = [
     tech: ["Angular", "React.js", "Java/J2EE", "D3.js", "Microservices"],
     link: "#",
     gradient: "from-orange-500 via-yellow-500 to-amber-500",
-    imageSrc: "/accenture.png",
+    imageSrc: "/portfolio/accenture.png",
     imageAlt: "Accenture themed image",
     caseStudy: {
       title: "Enterprise Solutions",
@@ -105,7 +105,7 @@ const projects: Project[] = [
     tech: ["Java/J2EE", "JSP", "MVC", "Accessibility", "Oracle DB"],
     link: "#",
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
-    imageSrc: "/NY%20state.png",
+    imageSrc: "/portfolio/NY%20state.png",
     imageAlt: "New York State",
     caseStudy: {
       title: "Compliance Portals",
@@ -127,7 +127,7 @@ const projects: Project[] = [
     tech: ["React.js", "Next.js", "Tailwind CSS", "AWS", "REST APIs"],
     link: "#",
     gradient: "from-blue-500 via-teal-500 to-green-500",
-    imageSrc: "/fhf2.png",
+    imageSrc: "/portfolio/fhf2.png",
     imageAlt: "Cars for Grad",
     caseStudy: {
       title: "Cars for Grad Program",

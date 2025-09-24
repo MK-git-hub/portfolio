@@ -7,8 +7,6 @@ const nextConfig = {
   assetPrefix: isProd ? '/portfolio/' : '',
   images: {
     unoptimized: true,
-    loader: 'custom',
-    loaderFile: './src/utils/imageLoader.js',
   },
   trailingSlash: true,
 };
