@@ -36,23 +36,24 @@ const projects: Project[] = [
   {
     title: "Donor Portal & Fundraising Platform",
     company: "Community Brands (NCU)",
-    tech: ["Angular 14+", "Next.js", "GraphQL", "RxJS", "AWS ECS/K8s"],
+    tech: ["React 18", "Next.js 14", "Angular 15+", "GraphQL", "AWS ECS/K8s"],
     link: "#",
     gradient: "from-blue-500 via-cyan-500 to-teal-500",
-    imageSrc: "/portfolio/community%20brands.png",
+    imageSrc: process.env.NODE_ENV === 'production' ? "/portfolio/community%20brands.png" : "/community%20brands.png",
     imageAlt: "Community Brands",
     caseStudy: {
       title: "Fundraising & Events Platform",
-      description: "Led end-to-end development of donor, fundraising & event portals.",
+      description: "Architected and developed comprehensive donor management and fundraising platforms using React 18 with modern hooks, context API, and performance optimizations. Built responsive event management systems with real-time updates and seamless user experiences.",
       achievements: [
-        "⚡ Built Angular Reactive Forms & implemented route-level code splitting",
-        "📊 Migrated Google Analytics UA → GA4 with GTM for precise tracking",
-        "🛠 Modernized legacy systems into Docker-based microservices on AWS"
+        "⚡ Implemented React 18 with concurrent features, Suspense, and automatic batching for enhanced performance",
+        "📊 Built custom React hooks for state management and integrated Google Analytics 4 with real-time tracking",
+        "🛠 Developed microservices architecture with React frontend, Next.js API routes, and AWS containerization",
+        "🅰️ Designed and developed Graduate Portal using Angular 15+ with standalone components and modern routing"
       ]
     },
     techUsage: {
-      labels: ["Angular (14+)", "React.js", "Next.js", "HTML5/CSS3", "GraphQL", "AWS", "Google Analytics"],
-      data: [60, 40, 30, 90, 70, 65, 50]
+      labels: ["React 18", "Next.js 14", "Angular 15+", "TypeScript", "GraphQL", "AWS", "Docker"],
+      data: [85, 75, 65, 80, 70, 65, 60]
     }
   },
   {
@@ -61,7 +62,7 @@ const projects: Project[] = [
     tech: ["React.js", "Angular", "Next.js", "Redux", "D3.js"],
     link: "#",
     gradient: "from-green-500 via-emerald-500 to-teal-500",
-    imageSrc: "/portfolio/fhf.jpg",
+    imageSrc: process.env.NODE_ENV === 'production' ? "/portfolio/fhf.jpg" : "/fhf.jpg",
     imageAlt: "First Help Financial",
     caseStudy: {
       title: "Sales & Analytics Dashboards",
@@ -83,7 +84,7 @@ const projects: Project[] = [
     tech: ["Angular", "React.js", "Java/J2EE", "D3.js", "Microservices"],
     link: "#",
     gradient: "from-orange-500 via-yellow-500 to-amber-500",
-    imageSrc: "/portfolio/accenture.png",
+    imageSrc: process.env.NODE_ENV === 'production' ? "/portfolio/accenture.png" : "/accenture.png",
     imageAlt: "Accenture themed image",
     caseStudy: {
       title: "Enterprise Solutions",
@@ -105,7 +106,7 @@ const projects: Project[] = [
     tech: ["Java/J2EE", "JSP", "MVC", "Accessibility", "Oracle DB"],
     link: "#",
     gradient: "from-indigo-500 via-purple-500 to-pink-500",
-    imageSrc: "/portfolio/NY%20state.png",
+    imageSrc: process.env.NODE_ENV === 'production' ? "/portfolio/NY%20state.png" : "/NY%20state.png",
     imageAlt: "New York State",
     caseStudy: {
       title: "Compliance Portals",
@@ -127,7 +128,7 @@ const projects: Project[] = [
     tech: ["React.js", "Next.js", "Tailwind CSS", "AWS", "REST APIs"],
     link: "#",
     gradient: "from-blue-500 via-teal-500 to-green-500",
-    imageSrc: "/portfolio/fhf2.png",
+    imageSrc: process.env.NODE_ENV === 'production' ? "/portfolio/fhf2.png" : "/fhf2.png",
     imageAlt: "Cars for Grad",
     caseStudy: {
       title: "Cars for Grad Program",
@@ -162,6 +163,8 @@ function TechUsageChart({ project }: { project: Project }) {
         borderWidth: 1,
         borderRadius: 4,
         borderSkipped: false,
+        barThickness: 8,
+        maxBarThickness: 12,
       },
     ],
   };
@@ -213,7 +216,7 @@ function TechUsageChart({ project }: { project: Project }) {
   };
 
   return (
-    <div className="h-48 w-full">
+    <div className="h-32 w-full">
       <Bar data={chartData} options={options} />
     </div>
   );
