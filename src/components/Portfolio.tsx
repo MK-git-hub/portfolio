@@ -175,7 +175,7 @@ function TechUsageChart({ project }: { project: Project }) {
       },
       tooltip: {
         callbacks: {
-          label: function(context: any) {
+          label: function(context: { label: string; parsed: { y: number } }) {
             return `${context.label}: ${context.parsed.y}%`;
           }
         }
@@ -198,7 +198,7 @@ function TechUsageChart({ project }: { project: Project }) {
         beginAtZero: true,
         max: 100,
         ticks: {
-          callback: function(value: any) {
+          callback: function(value: string | number) {
             return value + '%';
           },
           font: {

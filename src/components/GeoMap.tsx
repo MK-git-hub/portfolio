@@ -21,7 +21,8 @@ export default function GeoMap() {
       <ComposableMap projectionConfig={{ scale: 150 }} className="w-full h-auto">
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
-            geographies.map((geo) => (
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            geographies.map((geo: any) => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}

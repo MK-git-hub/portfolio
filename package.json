@@ -5,7 +5,7 @@
   "homepage": "https://MK-git-hub.github.io/portfolio",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "predeploy": "npm run build",
