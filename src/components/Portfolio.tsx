@@ -247,7 +247,8 @@ export default function Portfolio() {
                       src={p.imageSrc} 
                       alt={p.imageAlt ?? "Project image"} 
                       fill 
-                      className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" 
+                      className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                      unoptimized
                     />
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -278,21 +279,6 @@ export default function Portfolio() {
                     ))}
                   </div>
                   
-                  {/* Case study link with enhanced styling */}
-                  <a 
-                    href={p.link} 
-                    className="inline-flex items-center gap-2 text-sm lg:text-base font-semibold text-blue-600 dark:text-blue-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 group-hover:translate-x-2"
-                  >
-                    View Case Study
-                    <svg 
-                      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
                 </div>
               </div>
 
