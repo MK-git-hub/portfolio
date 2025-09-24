@@ -242,12 +242,12 @@ export default function Portfolio() {
               <div className="space-y-6">
                 <div className="flex flex-col gap-4">
                   {/* Image section */}
-                  <div className="relative h-64 md:h-72 w-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                  <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 w-full rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
                     <Image 
                       src={p.imageSrc} 
                       alt={p.imageAlt ?? "Project image"} 
                       fill 
-                      className="object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                      className="object-contain sm:object-cover opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
                       unoptimized
                     />
                     {/* Overlay on hover */}
